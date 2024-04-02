@@ -125,7 +125,6 @@ synonyms = dict(zip(synonyms_df['Variant'].str.strip(), synonyms_df['Canonical']
 # Load words tokens into dataframe
 for field in fields:
     df[f'{field}_word_tokens'] = df[field].apply(lambda row_text: seq_word_tokens(row_text) if isinstance(row_text, str) else [])
-        # seq_word_tokens) # Assign the list of tokenized results to the new column in the dataframe
 
 # Load phrase tokens into dataframe
 for field in fields:

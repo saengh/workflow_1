@@ -66,6 +66,6 @@ merged_df = pd.merge(df, results_df, left_index=True, right_index=True)
 merged_df.to_excel(workflow_folder + r'\excel\lda_topics.xlsx', index=False)
 merged_df.to_pickle(workflow_folder + r'\pickle\lda_topics.pickle')
 
-# Check topic separation
+# Check topic separation ------------------------------------------------------------------------------------------------
 vis_data = gensimvis.prepare(lda_model, corpus, dictionary=dictionary)
 pyLDAvis.save_html(vis_data, workflow_folder + r'\visuals\lda_pyldavis.html')
